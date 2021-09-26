@@ -3,6 +3,7 @@
   --secondary-color: #024e76;
   --tertiary-color: white;  
   --quaternary-color: rgb(255, 145, 0);
+  scroll-padding-top: 1.25in;
 }
 
 * {
@@ -39,14 +40,21 @@ header h1 {
   color: var(--primary-color);
   background-color: var(--secondary-color);
   margin: 0;
-  padding: 20px;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;  
   width: 40%;
   text-align: right;
 }
 
-header a {
+header h1 a {
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);  
+}
+
+a {
   text-decoration: none;  
+  color: var(--tertiary-color);  
+}
+
+header a {
   color: var(--quaternary-color);
 }
 
@@ -66,15 +74,13 @@ header nav ul li a {
   padding: 10px 15px;
   font-weight: lighter;
   font-size: 18px;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   color: var(--primary-color);
 }
 
 header nav ul li a:hover {
   background: var(--primary-color);
   color: var(--secondary-color);
-  border-radius: 15px;
-  text-shadow: none;
+  border-radius: 15px;  
 }
 
 table {
@@ -100,7 +106,7 @@ table {
   font-style: italic;
   font-size: 36px;
   color: var(--primary-color);
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75); 
   text-align: right;
 }
 
@@ -118,7 +124,14 @@ table {
   margin: 20px;
   background: var(--secondary-color);
   color: var(--tertiary-color);  
-  flex: 0 0 42%;
+  flex: 1 0 42%;
+  opacity: 75%;
+  transition: opacity 0.25s ease-in-out;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+}
+
+.section-content article:hover {
+  opacity: 100%;
 }
 
 article > img {
@@ -146,17 +159,22 @@ article > div > p {
   font-size: 16px;  
 }
 
-#contact-me > div {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+#contact-me {
+  vertical-align: bottom;
 }
 
-#contact-me > div * {
-  flex: 0 0 25%;
-  margin: 5px;  
-  color: var(--primary-color);    
+#contact-me > .section-content {
+  align-items: center;
+  height: 0.6in;
+}
+
+#contact-me > .section-content * { 
   white-space: nowrap;
+  
+}
+
+#contact-me h3 {
+  border-bottom: 3px solid var(--primary-color);
 }
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
@@ -203,5 +221,18 @@ article > div > p {
 
   #contact-me > .section-content {
     flex-direction: column;
+    height: auto;
+  }
+
+  #contact-me > .section-content h3 {
+    font-size: 13px;
+  }
+
+  table {
+    border-spacing: 0.12in;
+  }
+
+  .section-content article {  
+    margin: 10px;
   }
 }
