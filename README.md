@@ -9,5 +9,7 @@ A portfolio website for William Feistel that showcases coding projects.
 ## Website
 https://lfeistel.github.io/portfolio/
 
+![Screenshot](./assets/images/portfolio.png)
+
 ## Contribution
 Made with ❤️ by William Feistel
