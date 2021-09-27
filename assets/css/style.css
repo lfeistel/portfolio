@@ -34,18 +34,27 @@ header {
   width: 100%;
 }
 
-header h1 {
-  font-weight: bold;
-  font-size: 36px;
-  color: var(--primary-color);
+header div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   background-color: var(--secondary-color);
   margin: 0;
   padding: 20px;  
   width: 40%;
-  text-align: right;
 }
 
-header h1 a {
+header div img {  
+  height: 0.75in;
+  border-radius: 0.5in;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+}
+
+header a {
+  font-weight: bold;
+  font-size: 36px;
+  color: var(--primary-color);
+  text-align: right;
   text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);  
 }
 
