@@ -192,13 +192,17 @@ article p {
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
+  :root {
+    scroll-padding-top: 0.5in;
+  }
+
   header {
     padding-bottom: 0;
     justify-content: center;
     position: relative;
   }
 
-  header h1 {
+  header div {
     width: 100%;
     text-align: center;
   }
@@ -209,8 +213,8 @@ article p {
     justify-content: center;
   }
 
-  header nav ul li a {
-    font-size: 20px;
+  .section-content article {  
+    opacity: 100%;
   }
 }
 
@@ -220,20 +224,26 @@ article p {
 
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
-  header h1 {
-    font-size: 20px;
+  :root {
+    scroll-padding-top: 0.25in;
+  }
+
+  header div a {
+    font-size: 20px;    
+  }
+
+  header div img {  
+    height: 0.50in;
+    border-radius: 0.25in;
   }
 
   header nav ul li a {
     font-size: 14px;
+    padding: 5px 5px;
   }
-
+  
   .section-title h2 {
     font-size: 13px;
-  }
-
-  .section-content article {  
-    opacity: 100%;
   }
 
   #contact-me > .section-content {
